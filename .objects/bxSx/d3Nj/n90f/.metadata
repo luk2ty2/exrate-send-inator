@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Archiwum kursów średnich – tabela A (C",
+  "Type": "Screen",
+  "Id": "n90fONz-Vk2tmX3oomzl5w",
+  "Reference": "Kp6BFx4vq0OLxWq-UgF0Pw/n90fONz-Vk2tmX3oomzl5w",
+  "ParentRef": "Kp6BFx4vq0OLxWq-UgF0Pw/d3Nj1jhRl0iiYxfBvymfuA",
+  "Created": "2024-09-26T12:52:13.8114063Z",
+  "Updated": "2024-09-26T12:52:13.8114063Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,1052 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uasf="clr-namespace:UiPath.Activities.System.FileOperations;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueawb="clr-namespace:UiPath.Excel.Activities.Windows.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Windows.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1036,1156" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Date_Today" />
+      <Variable x:TypeArguments="x:String" Default="2024" Name="Year_Today" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Data_Table_Exchange_Rates_Year_Today" />
+      <Variable x:TypeArguments="x:String" Name="Date_Minus365" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Data_Table_Exchange_Rates" />
+      <Variable x:TypeArguments="x:String" Default="2023" Name="Year_Minus365" />
+      <Variable x:TypeArguments="x:String" Default="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" Name="Folderpath_Downloads" />
+      <Variable x:TypeArguments="x:String" Default="[Path.Combine(Folderpath_Downloads, $&quot;NBP_Exchange_Rates_{DateTime.Today.ToString(&quot;ddMMyyyy&quot;)}.xlsx&quot;)]" Name="Filepath_Result_File" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Data_Table_Exchange_Rates_Filtered" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Data_Table_Echange_Rates_Chosen_Columns" />
+      <Variable x:TypeArguments="x:Boolean" Name="Exist_Check_Filepath_Result_File" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Downloading currency rate CSV files from NBP site" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_29">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_14">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Date_Today]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[DateTime.Today.ToString("dd.MM.yyyy")]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_15">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Year_Today]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Split(Date_Today, ".")(2)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <WriteLine sap2010:Annotation.AnnotationText="Simple output log message for ensuring previous processes were completed.&#xA;This way of helping to identify potential errors is standard for this automation." DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Today's date is &quot;+ Date_Today +&quot;. CSV file for year &quot;+ Year_Today +&quot; will be downloaded.&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </WriteLine>
+      <uasf:DownloadFileFromUrl ResponseAttachment="{x:Null}" Timeout="{x:Null}" sap2010:Annotation.AnnotationText="Variable Folderpath_Downloads is used in the properties of this activity, to ensure the file will be downloaded into windows &quot;Downloads&quot; system folder no matter the language of the operating system." ConflictResolution="Rename" DisplayName="Download File from URL" FileName="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Today}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="DownloadFileFromUrl_3" Url="[&quot;https://static.nbp.pl/dane/kursy/Archiwum/archiwum_tab_a_&quot; + Year_Today + &quot;.csv&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uasf:DownloadFileFromUrl>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;File &quot; + Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Today}.csv&quot;) + &quot; was succesfully downloaded.&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </WriteLine>
+      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_16">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Date_Minus365]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[(DateTime.Today.AddDays(-365)).ToString("dd.MM.yyyy")]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_17">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Year_Minus365]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Split(Date_Minus365, ".")(2)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <If Condition="[Year_Minus365 &lt;&gt; Year_Today]" sap:VirtualizedContainerService.HintSize="450,782" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,417" sap2010:WorkflowViewState.IdRef="Sequence_36">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Date 365 days back is  &quot;+ Date_Minus365 +&quot;. CSV file for year &quot;+ Year_Minus365 +&quot; will be downloaded.&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+            <uasf:DownloadFileFromUrl ResponseAttachment="{x:Null}" Timeout="{x:Null}" ConflictResolution="Rename" DisplayName="Download File from URL" FileName="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Minus365}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="DownloadFileFromUrl_4" Url="[&quot;https://static.nbp.pl/dane/kursy/Archiwum/archiwum_tab_a_&quot; + Year_Minus365 + &quot;.csv&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uasf:DownloadFileFromUrl>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;File &quot; + Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Minus365}.csv&quot;) + &quot; was succesfully downloaded.&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap2010:Annotation.AnnotationText="Leap year exception" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Date 365 days back is  &quot;+ Date_Minus365 +&quot;. We're in the year &quot; + Year_Minus365 + &quot; and no additional file will be downloaded.&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="Importing data from CSV file and data table formatting" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_30">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[Data_Table_Exchange_Rates_Year_Today]" Delimitator="Semicolon" DelimitatorForViewModel="Semicolon" DisplayName="Read CSV" FilePath="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Today}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="570,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadCsvFile>
+      <Sequence sap2010:Annotation.AnnotationText="Cleanup is performed based on the known layout of the NBP CSV file" DisplayName="CSV file cleanup" sap:VirtualizedContainerService.HintSize="570,1215" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:RemoveDataRow Row="{x:Null}" DataTable="[Data_Table_Exchange_Rates_Year_Today]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="502,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_5" RowIndex="0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RemoveDataRow>
+        <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="502,465" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_3" NumberOfTimes="3" StartAt="1">
+          <ui:RepeatNumberOfTimesX.Body>
+            <ActivityAction x:TypeArguments="x:Int32">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:RemoveDataRow Row="{x:Null}" DataTable="[Data_Table_Exchange_Rates_Year_Today]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="RemoveDataRow_7" RowIndex="[Data_Table_Exchange_Rates_Year_Today.rows.count -1]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:RemoveDataRow>
+              </Sequence>
+            </ActivityAction>
+          </ui:RepeatNumberOfTimesX.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RepeatNumberOfTimesX>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Data_Table_Exchange_Rates_Year_Today]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,409" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,222" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap2010:Annotation.AnnotationText="Parsing date from respective column and rewriting it as DateTime object.&#xA;Watch out for the CurrentRow naming! Column &quot;data&quot; is named after polish translation of the word &quot;date&quot;, which comes from the CSV layout." sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="Assign_22">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Object">[CurrentRow("data")]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Object">[DateTime.ParseExact(CurrentRow("data").ToString(), "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+      </Sequence>
+      <If Condition="[Year_Minus365 &lt;&gt; Year_Today]" sap:VirtualizedContainerService.HintSize="570,2522" sap2010:WorkflowViewState.IdRef="If_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap2010:Annotation.AnnotationText="If CSV files from current and previous year have to be considered:&#xA;- previous processes have to be repeated for previous year&#xA;- two data tables have to be merged into one" DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,2034" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[Data_Table_Exchange_Rates]" Delimitator="Semicolon" DelimitatorForViewModel="Semicolon" DisplayName="Read CSV" FilePath="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Minus365}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="502,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_4" />
+            <Sequence DisplayName="CSV file cleanup" sap:VirtualizedContainerService.HintSize="502,766" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:RemoveDataRow Row="{x:Null}" DataTable="[Data_Table_Exchange_Rates]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="RemoveDataRow_6" RowIndex="0" />
+              <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="450,456" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_4" NumberOfTimes="3" StartAt="1">
+                <ui:RepeatNumberOfTimesX.Body>
+                  <ActivityAction x:TypeArguments="x:Int32">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:RemoveDataRow Row="{x:Null}" DataTable="[Data_Table_Exchange_Rates]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="RemoveDataRow_8" RowIndex="[Data_Table_Exchange_Rates.rows.count -1]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RepeatNumberOfTimesX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RepeatNumberOfTimesX>
+            </Sequence>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Data_Table_Exchange_Rates]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,361" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_26">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[CurrentRow("data")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">[DateTime.ParseExact(CurrentRow("data").ToString(), "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:MergeDataTable Destination="[Data_Table_Exchange_Rates]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="502,165" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add" Source="[Data_Table_Exchange_Rates_Year_Today]" />
+            <Assign sap2010:Annotation.AnnotationText="The filter ensures that only rows dates 365 days back are considered.&#xA;This is where previous conversion of &quot;data&quot; column to a Date Time object finds its use.  " sap:VirtualizedContainerService.HintSize="502,172" sap2010:WorkflowViewState.IdRef="Assign_21">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[Data_Table_Exchange_Rates_Filtered]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable" xml:space="preserve">[Data_Table_Exchange_Rates.AsEnumerable() _
+                    .Where(Function(CurrentRow) Convert.ToDateTime(CurrentRow("data")) &gt;= DateTime.Today.AddDays(-365)) _
+                    .CopyToDataTable()]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="CSV output of merged, filtered tables from current &amp; previous year for manual verification in case of errors." CsvAction="Write" DataTable="[Data_Table_Exchange_Rates_Filtered]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Minus365}_{Year_Today}_formatted_{DateTime.Now.ToString(&quot;ddMMyyyy&quot;)}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="502,267" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_3" ShouldQuote="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendWriteCsvFile>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,327" sap2010:WorkflowViewState.IdRef="Sequence_39">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="CSV output of formatted data table (current year) for manual verification in case of errors." CsvAction="Write" DataTable="[Data_Table_Exchange_Rates_Year_Today]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="[Path.Combine(Folderpath_Downloads, $&quot;archiwum_tab_a_{Year_Today}_formatted_{DateTime.Now.ToString(&quot;ddMMyyyy&quot;)}.csv&quot;)]" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_4" ShouldQuote="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendWriteCsvFile>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="In this version - three currencies are taken into consideration as below.&#xA;It is supposed to be a constant automation running without further inputs of the user, however future releases may include option to indicate what currencies are supposed to be extracted from the database." DisplayName="Creating workbook file" sap:VirtualizedContainerService.HintSize="450,129" sap2010:WorkflowViewState.IdRef="Sequence_27">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="EUR" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <Assign.To>
+            <OutArgument x:TypeArguments="sd:DataTable">[Data_Table_Echange_Rates_Chosen_Columns]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="sd:DataTable">[Data_Table_Exchange_Rates_Filtered.DefaultView.ToTable(False, "data", "1EUR")]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450,221" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_23">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Object">[CurrentRow("data")]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Object">[DateTime.ParseExact(CurrentRow("data").ToString(), "MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture).ToString("dd.MM.yyyy")]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+        <ui:WriteRange AddHeaders="True" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="EUR" StartingCell="A1" WorkbookPath="[Filepath_Result_File]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:WriteRange>
+      </Sequence>
+      <Sequence DisplayName="USD" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_33">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_19">
+          <Assign.To>
+            <OutArgument x:TypeArguments="sd:DataTable">[Data_Table_Echange_Rates_Chosen_Columns]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="sd:DataTable">[Data_Table_Exchange_Rates_Filtered.DefaultView.ToTable(False, "data", "1USD")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,361" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_24">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Object">[CurrentRow("data")]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Object">[DateTime.ParseExact(CurrentRow("data").ToString(), "MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture).ToString("dd.MM.yyyy")]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+        </ui:ForEachRow>
+        <ui:WriteRange AddHeaders="True" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="502,139" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="USD" StartingCell="A1" WorkbookPath="[Filepath_Result_File]" />
+      </Sequence>
+      <Sequence DisplayName="GBP" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_34">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_20">
+          <Assign.To>
+            <OutArgument x:TypeArguments="sd:DataTable">[Data_Table_Echange_Rates_Chosen_Columns]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="sd:DataTable">[Data_Table_Exchange_Rates_Filtered.DefaultView.ToTable(False, "data", "1GBP")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,361" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_25">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Object">[CurrentRow("data")]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Object">[DateTime.ParseExact(CurrentRow("data").ToString(), "MM/dd/yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture).ToString("dd.MM.yyyy")]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+        <ui:WriteRange AddHeaders="True" DataTable="[Data_Table_Echange_Rates_Chosen_Columns]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="502,139" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="GBP" StartingCell="A1" WorkbookPath="[Filepath_Result_File]" />
+      </Sequence>
+    </Sequence>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="The charts are created using simple click/CV based activities integrated with excel app.&#xA;Future releases may include invoking excel macro." DisplayName="Excel file editing" sap:VirtualizedContainerService.HintSize="450,159" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_35">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,1955" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" TemplatePath="[Filepath_Result_File]" UseTemplate="True" WorkbookPath="[Filepath_Result_File]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="NBP_Exchange_Rates_ddMMyyyy" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1640" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Creating EUR exchange rates chart" sap:VirtualizedContainerService.HintSize="478,1475" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:TextToColumnsX NumberOfCharactersPerColumn="{x:Null}" OtherSeparator="{x:Null}" ConsecutiveOperatorsAsOne="False" DestinationRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;EUR&quot;).Range(&quot;B:B&quot;)]" DisplayName="Text to Columns" sap:VirtualizedContainerService.HintSize="444,348" sap2010:WorkflowViewState.IdRef="TextToColumnsX_4" ParsingType="Delimited" SourceRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;EUR&quot;).Range(&quot;B:B&quot;)]" SplitByComma="False" SplitByLineBreak="False" SplitByOther="False" SplitBySemicolon="False" SplitBySpace="False" SplitByTabs="False" TextQualifier="None" />
+                      <ueawb:SelectRangeX DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="444,122" sap2010:WorkflowViewState.IdRef="SelectRangeX_4" Range="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;EUR&quot;).Range(&quot;A:B&quot;)]" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Insert'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_10" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="210, 65, 37, 12" CvTextArgument="Insert" CvType="Text" DesignTimeRectangle="202, 56, 53, 30" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' role='Tab Item' check:fulltext='Insert' /&gt;" Guid="5778b99c-01d7-4d86-8f5f-aab6c5ee49d0" InformativeScreenshot="8ea1622623ae3cf6a4b4bc45618da019.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="266, 65, 73, 15" CvTextArgument="Page Layout" CvType="Text" DesignTimeRectangle="256, 56, 93, 30" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' role='Tab Item' check:fulltext='Page Layout' /&gt;" Guid="932af4c6-0196-41fb-8a00-b03735b0b49d" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_11" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="31fd5fd3-c286-4c6d-b344-9ce3ef098d5f" CvElementArea="655, 117, 22, 20" CvType="Icon" DesignTimeRectangle="653, 115, 26, 24" DesignTimeScaleFactor="1" ElementType="Icon" Guid="8f769002-33b7-4563-8805-8aa214f4383a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVEhL7ZM9S8RAEIb9OwERFQ+PW7RTbNJYKilsU4ggREHkYAsLEURIBCVaiTYhpUXAJohgUK6JxcH9l5F3YMO6dxvOcPgBVzyw2Znsk5nJzjiOQz/BVNSY/yES1wNmVMzk74jKsmTM/db+LbVPnpil3ctq35bfSLSwfUid6INmxRrNb/q8ntvYsuaDWpHrulQUBeV5TkEQ8B4O71y8s0zlcXXykaSUlGUZCSGqmKJWFIYhxXFMnuexEAfgwNbB/VDuyvkrddMe55oxUCtCJepFSP27N2qfPg/lgbP0hVav+lzxqLhVBAFE6hmzWL/p01H08CUPoOokSbhSVGzGgVWkDxVfiUrEXsQt9H2/ysMaH4S2Is/2y48lWj5OGaz1g4Ep/rZIsbgj+S/Te69aBTA7Pd9GrQh3A3cE8zFjesXjUCvCXPRbrzMxka3XTfl90aSZihri0CfvRBLCtzR66gAAAABJRU5ErkJggg==" InformativeScreenshot="bc0037ce34e5d9a40a2c0f9e1c1a700c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="567, 90, 86, 76" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' role='Button' check:fulltext='Recommended Charts' /&gt;" Guid="27c89a82-7f93-4f86-995d-af4570024cdf" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_12" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="657, 170, 56, 56" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' role='List Item' automationid='' check:fulltext='Line' /&gt;" Guid="c49adaa6-4055-4c33-8174-c220424cbeac" InformativeScreenshot="f1814496994304deb787fb66e781a96f.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="657, 142, 280, 148" ElementType="Container" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' role='Group' automationid='' check:fulltext='Line&amp;#x9;Stacked Line&amp;#x9;100% Stacked Line&amp;#x9;Line with Markers&amp;#x9;Stacked Line with Markers&amp;#x9;100% Stacked Line with Markers' /&gt;" Guid="52ca0d98-78c9-4c04-b09b-fc8a38afe102" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" InScope="[NBP_Exchange_Rates_ddMMyyyy]" ScopeIdentifier="KursyWalut_yyyyMMdd" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V4">
+                        <uix:NKeyboardShortcuts.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NKeyboardShortcuts.VerifyOptions>
+                      </uix:NKeyboardShortcuts>
+                    </Sequence>
+                    <Sequence DisplayName="Creating USD exchange rates chart" sap:VirtualizedContainerService.HintSize="478,57" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:TextToColumnsX NumberOfCharactersPerColumn="{x:Null}" OtherSeparator="{x:Null}" ConsecutiveOperatorsAsOne="False" DestinationRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;USD&quot;).Range(&quot;B:B&quot;)]" DisplayName="Text to Columns" sap:VirtualizedContainerService.HintSize="444,348" sap2010:WorkflowViewState.IdRef="TextToColumnsX_5" ParsingType="Delimited" SourceRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;USD&quot;).Range(&quot;B:B&quot;)]" SplitByComma="False" SplitByLineBreak="False" SplitByOther="False" SplitBySemicolon="False" SplitBySpace="False" SplitByTabs="False" TextQualifier="None" />
+                      <ueawb:SelectRangeX DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="444,122" sap2010:WorkflowViewState.IdRef="SelectRangeX_5" Range="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;USD&quot;).Range(&quot;A:B&quot;)]" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Insert'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_13" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="210, 65, 37, 12" CvTextArgument="Insert" CvType="Text" DesignTimeRectangle="202, 56, 53, 30" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' role='Tab Item' check:fulltext='Insert' /&gt;" Guid="5778b99c-01d7-4d86-8f5f-aab6c5ee49d0" InformativeScreenshot="8ea1622623ae3cf6a4b4bc45618da019.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="266, 65, 73, 15" CvTextArgument="Page Layout" CvType="Text" DesignTimeRectangle="256, 56, 93, 30" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' role='Tab Item' check:fulltext='Page Layout' /&gt;" Guid="932af4c6-0196-41fb-8a00-b03735b0b49d" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_14" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="31fd5fd3-c286-4c6d-b344-9ce3ef098d5f" CvElementArea="655, 117, 22, 20" CvType="Icon" DesignTimeRectangle="653, 115, 26, 24" DesignTimeScaleFactor="1" ElementType="Icon" Guid="8f769002-33b7-4563-8805-8aa214f4383a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVEhL7ZM9S8RAEIb9OwERFQ+PW7RTbNJYKilsU4ggREHkYAsLEURIBCVaiTYhpUXAJohgUK6JxcH9l5F3YMO6dxvOcPgBVzyw2Znsk5nJzjiOQz/BVNSY/yES1wNmVMzk74jKsmTM/db+LbVPnpil3ctq35bfSLSwfUid6INmxRrNb/q8ntvYsuaDWpHrulQUBeV5TkEQ8B4O71y8s0zlcXXykaSUlGUZCSGqmKJWFIYhxXFMnuexEAfgwNbB/VDuyvkrddMe55oxUCtCJepFSP27N2qfPg/lgbP0hVav+lzxqLhVBAFE6hmzWL/p01H08CUPoOokSbhSVGzGgVWkDxVfiUrEXsQt9H2/ysMaH4S2Is/2y48lWj5OGaz1g4Ep/rZIsbgj+S/Te69aBTA7Pd9GrQh3A3cE8zFjesXjUCvCXPRbrzMxka3XTfl90aSZihri0CfvRBLCtzR66gAAAABJRU5ErkJggg==" InformativeScreenshot="bc0037ce34e5d9a40a2c0f9e1c1a700c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="567, 90, 86, 76" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' role='Button' check:fulltext='Recommended Charts' /&gt;" Guid="27c89a82-7f93-4f86-995d-af4570024cdf" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_15" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="657, 170, 56, 56" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' role='List Item' automationid='' check:fulltext='Line' /&gt;" Guid="c49adaa6-4055-4c33-8174-c220424cbeac" InformativeScreenshot="f1814496994304deb787fb66e781a96f.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="657, 142, 280, 148" ElementType="Container" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' role='Group' automationid='' check:fulltext='Line&amp;#x9;Stacked Line&amp;#x9;100% Stacked Line&amp;#x9;Line with Markers&amp;#x9;Stacked Line with Markers&amp;#x9;100% Stacked Line with Markers' /&gt;" Guid="52ca0d98-78c9-4c04-b09b-fc8a38afe102" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" InScope="[NBP_Exchange_Rates_ddMMyyyy]" ScopeIdentifier="KursyWalut_yyyyMMdd" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V4">
+                        <uix:NKeyboardShortcuts.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NKeyboardShortcuts.VerifyOptions>
+                      </uix:NKeyboardShortcuts>
+                    </Sequence>
+                    <Sequence DisplayName="Creating GBP exchange rates chart" sap:VirtualizedContainerService.HintSize="478,48" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:TextToColumnsX NumberOfCharactersPerColumn="{x:Null}" OtherSeparator="{x:Null}" ConsecutiveOperatorsAsOne="False" DestinationRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;GBP&quot;).Range(&quot;B:B&quot;)]" DisplayName="Text to Columns" sap:VirtualizedContainerService.HintSize="444,348" sap2010:WorkflowViewState.IdRef="TextToColumnsX_6" ParsingType="Delimited" SourceRange="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;GBP&quot;).Range(&quot;B:B&quot;)]" SplitByComma="False" SplitByLineBreak="False" SplitByOther="False" SplitBySemicolon="False" SplitBySpace="False" SplitByTabs="False" TextQualifier="None" />
+                      <ueawb:SelectRangeX DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="444,122" sap2010:WorkflowViewState.IdRef="SelectRangeX_6" Range="[NBP_Exchange_Rates_ddMMyyyy.Sheet(&quot;GBP&quot;).Range(&quot;A:B&quot;)]" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Insert'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_16" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="210, 65, 37, 12" CvTextArgument="Insert" CvType="Text" DesignTimeRectangle="202, 56, 53, 30" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabInsert' cls='NetUIRibbonTab' name='Insert' role='Tab Item' check:fulltext='Insert' /&gt;" Guid="5778b99c-01d7-4d86-8f5f-aab6c5ee49d0" InformativeScreenshot="8ea1622623ae3cf6a4b4bc45618da019.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="c0f1d343-32a3-4651-a5bc-be30a2eb7f1a" CvTextArea="266, 65, 73, 15" CvTextArgument="Page Layout" CvType="Text" DesignTimeRectangle="256, 56, 93, 30" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabPageLayoutExcel' cls='NetUIRibbonTab' name='Page Layout' role='Tab Item' check:fulltext='Page Layout' /&gt;" Guid="932af4c6-0196-41fb-8a00-b03735b0b49d" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Icon'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_17" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="31fd5fd3-c286-4c6d-b344-9ce3ef098d5f" CvElementArea="655, 117, 22, 20" CvType="Icon" DesignTimeRectangle="653, 115, 26, 24" DesignTimeScaleFactor="1" ElementType="Icon" Guid="8f769002-33b7-4563-8805-8aa214f4383a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVEhL7ZM9S8RAEIb9OwERFQ+PW7RTbNJYKilsU4ggREHkYAsLEURIBCVaiTYhpUXAJohgUK6JxcH9l5F3YMO6dxvOcPgBVzyw2Znsk5nJzjiOQz/BVNSY/yES1wNmVMzk74jKsmTM/db+LbVPnpil3ctq35bfSLSwfUid6INmxRrNb/q8ntvYsuaDWpHrulQUBeV5TkEQ8B4O71y8s0zlcXXykaSUlGUZCSGqmKJWFIYhxXFMnuexEAfgwNbB/VDuyvkrddMe55oxUCtCJepFSP27N2qfPg/lgbP0hVav+lzxqLhVBAFE6hmzWL/p01H08CUPoOokSbhSVGzGgVWkDxVfiUrEXsQt9H2/ysMaH4S2Is/2y48lWj5OGaz1g4Ep/rZIsbgj+S/Te69aBTA7Pd9GrQh3A3cE8zFjesXjUCvCXPRbrzMxka3XTfl90aSZihri0CfvRBLCtzR66gAAAABJRU5ErkJggg==" InformativeScreenshot="bc0037ce34e5d9a40a2c0f9e1c1a700c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="567, 90, 86, 76" ElementType="Button" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia automationid='ChartInsertGalleryNew' cls='NetUIRibbonButton' name='Recommended Charts' role='Button' check:fulltext='Recommended Charts' /&gt;" Guid="27c89a82-7f93-4f86-995d-af4570024cdf" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line'" sap:VirtualizedContainerService.HintSize="444,225" sap2010:WorkflowViewState.IdRef="NClick_18" InScope="[NBP_Exchange_Rates_ddMMyyyy]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="KursyWalut_yyyyMMdd" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="657, 170, 56, 56" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;&lt;uia cls='NetUIGalleryButton' name='Line' role='List Item' automationid='' check:fulltext='Line' /&gt;" Guid="c49adaa6-4055-4c33-8174-c220424cbeac" InformativeScreenshot="f1814496994304deb787fb66e781a96f.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='KursyWalut_20241030.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="657, 142, 280, 148" ElementType="Container" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&lt;uia cls='NetUIChunk' name='Charts' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='2-D Line' role='Group' automationid='' check:fulltext='Line&amp;#x9;Stacked Line&amp;#x9;100% Stacked Line&amp;#x9;Line with Markers&amp;#x9;Stacked Line with Markers&amp;#x9;100% Stacked Line with Markers' /&gt;" Guid="52ca0d98-78c9-4c04-b09b-fc8a38afe102" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" InScope="[NBP_Exchange_Rates_ddMMyyyy]" ScopeIdentifier="KursyWalut_yyyyMMdd" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V4">
+                        <uix:NKeyboardShortcuts.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NKeyboardShortcuts.VerifyOptions>
+                      </uix:NKeyboardShortcuts>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="E-mail sending" sap:VirtualizedContainerService.HintSize="450,731" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+      <umab:OutlookApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,528" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="upr:ILocalResource" Name="IlocalResource_Result_File" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:PathExists sap2010:Annotation.AnnotationText="Since Send Email does not support easy attachment selection for dynamic file names/locations, a workaround is mandatory:&#xA;This activity is generating an output in format of an IlocalResource variable, which can be added to a collection of attachments.&#xA;Exists output of this activity is used for Write Line log message below." DisplayName="Path Exists" Exists="[Exist_Check_Filepath_Result_File]" sap:VirtualizedContainerService.HintSize="382,264" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[Filepath_Result_File]" PathType="File" Resource="[IlocalResource_Result_File]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:PathExists>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;Do attachment file exists (T/F)? - &quot; + Exist_Check_Filepath_Result_File.ToString()]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+            <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" To="{x:Null}" sap2010:Annotation.AnnotationText="Make sure to add your recipient's e-mail address!" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Greetings!&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Please find exchange rates of PLN to EUR/USD/GBP for the past 365 days.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Best Regards!&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Exrate-&lt;/SPAN&gt;&lt;SPAN&gt;send-&lt;/SPAN&gt;&lt;SPAN&gt;inator&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="8a7e0b87-fe32-4da5-8a57-173f4cfdb363" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="382,99" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="NBP Exchange Rates" UseConnectionService="True" UseSharedMailbox="False">
+              <umam:SendMailConnections.AttachmentList>
+                <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+                  <InArgument x:TypeArguments="upr:IResource">[IlocalResource_Result_File]</InArgument>
+                </scg:List>
+              </umam:SendMailConnections.AttachmentList>
+              <umam:SendMailConnections.AttachmentsBackup>
+                <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Builder">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                      <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">[Lista_Zalacznikow]</InArgument>
+                    </scg:List>
+                    <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+                      <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+                        <InArgument x:TypeArguments="upr:IResource">[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Downloads\KursyWalut_"+DateTime.Today.ToString("yyyyMMdd")+".xlsx"]</InArgument>
+                      </scg:List>
+                    </scg:List>
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </umam:SendMailConnections.AttachmentsBackup>
+              <umam:SendMailConnections.InputTypeBackup>
+                <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </umam:SendMailConnections.InputTypeBackup>
+              <umam:SendMailConnections.MailboxBackup>
+                <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" StoredValue="NoMailbox">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </umam:SendMailConnections.MailboxBackup>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umam:SendMailConnections>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="E-mail was succesfully sent.">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+          </Sequence>
+        </ActivityAction>
+      </umab:OutlookApplicationCard.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </umab:OutlookApplicationCard>
+  </Sequence>
+</Activity>

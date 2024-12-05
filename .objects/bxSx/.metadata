@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Archiwum kursów średnich – tabela A (CSV, XLS)  Narodowy Bank Polski - Internet",
+  "Type": "App",
+  "Id": "bxSxwZE6-EukLXuZR22XAg",
+  "Reference": "Kp6BFx4vq0OLxWq-UgF0Pw/bxSxwZE6-EukLXuZR22XAg",
+  "Created": "2024-09-26T12:52:13.7592094Z",
+  "Updated": "2024-09-26T12:52:13.7592094Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

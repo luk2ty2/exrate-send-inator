@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click '2023'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "S3-UMXNwykieJpKzchSnOQ",
+  "Reference": "Kp6BFx4vq0OLxWq-UgF0Pw/S3-UMXNwykieJpKzchSnOQ",
+  "ParentRef": "Kp6BFx4vq0OLxWq-UgF0Pw/n90fONz-Vk2tmX3oomzl5w",
+  "Created": "2024-09-26T12:52:14.1668932Z",
+  "Updated": "2024-09-26T12:52:14.1668932Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

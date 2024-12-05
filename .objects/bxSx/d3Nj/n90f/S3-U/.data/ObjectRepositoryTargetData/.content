@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BnGgUQ42NkqbbN3HjfY_Kw" Reference="Kp6BFx4vq0OLxWq-UgF0Pw/S3-UMXNwykieJpKzchSnOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://nbp.pl/statystyka-i-sprawozdawczosc/kursy/archiwum-tabela-a-csv-xls/" CVScreenId="9c793e00-8885-4304-b042-615322fdaa50" CvTextArgument="[currentText]" DesignTimeRectangle="1265, 562, 106, 48" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[currentText]" FuzzySelectorArgument="[currentText]" Guid="59ac715a-2a53-48f8-83f6-fea61d847df7" ImageBase64="" NativeTextArgument="[currentText]" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Archiwum kursów średnich – tabela A (CSV, XLS) | Narodowy Bank Polski - Internetowy Serwis Informacyjny' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="2">
+          <Target DesignTimeRectangle="248, 395, 1184, 271" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' idx='4' parentid='main-content' tag='DIV' /&gt;" Guid="9a6c5941-4a18-4919-886e-8b1edb2a9ba5" SearchSteps="Selector" />
+          <Target CVScreenId="9c793e00-8885-4304-b042-615322fdaa50" DesignTimeRectangle="248, 347, 1184, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl id='h-format-xls' tag='H3' /&gt;" Guid="2d1e8f24-baef-434b-b77e-f8cc76ad5bc3" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="978acbf28cd5a85c368c589a58b2c46a.png" xmlns="">0xqVy1_JgKU6CrwUh72HCZw</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="*" Name="currentText" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
